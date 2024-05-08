@@ -1,0 +1,48 @@
+services: 
+    db:
+      image: postgres:12.18
+      hostname: db
+      restart: always
+      environment:
+        POSTGRES_USER: user
+        POSTGRES_PASSWORD: password
+        POSTGRES_DB: socialize-api  
+
+    nginx:    
+        image: nginx:stable-alpine
+        restart: always
+        ports:
+          - "3000:8080"                
+        volumes:          
+          - ./nginx/config:/etc/nginx/conf.d/  
+          - ./nginx/logs:/var/log/nginx/ 
+
+    api_1:
+        build: .
+        hostname: api_1
+        restart: always        
+        environment:
+          TZ: America/Sao_Paulo   
+          TOKEN_SECRET: fdasfasdfasdf
+          SERVER_PORT: 80    
+          DB_HOST: db
+          DB_USER: user
+          DB_PASSWORD: password
+          DB_DB: socialize-api
+
+    api_2:
+        build: .
+        hostname: api_2
+        restart: always        
+        environment:
+          TZ: America/Sao_Paulo   
+          TOKEN_SECRET: fdasfasdfasdf
+          SERVER_PORT: 80
+          DB_HOST: db
+          DB_USER: user
+          DB_PASSWORD: password
+          DB_DB: socialize-api  
+
+
+  
+      
