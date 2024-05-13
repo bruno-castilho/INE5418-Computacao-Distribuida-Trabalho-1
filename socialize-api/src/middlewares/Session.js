@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 
-const TOKEN_SECRET = 'fdadasdasdasd'
+const TOKEN_SECRET = process.env.TOKEN_SECRET
 
 module.exports = {
   onlyUsers(req, res, next) {

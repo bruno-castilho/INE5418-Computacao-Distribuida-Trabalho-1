@@ -7,6 +7,8 @@ services:
         POSTGRES_USER: user
         POSTGRES_PASSWORD: password
         POSTGRES_DB: socialize-api  
+      volumes:
+      - pgdata:/var/lib/postgresql/data
 
     nginx:    
         image: nginx:stable-alpine
@@ -44,5 +46,5 @@ services:
           DB_DB: socialize-api  
 
 
-  
-      
+volumes:
+  pgdata:
