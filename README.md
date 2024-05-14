@@ -72,6 +72,46 @@ Utilize o script shell disponibilizado na pasta raiz do projeto:
     - URL: `http://localhost:3000/users/:user_id`
 
 ### Posts
+
+  - FindAll
+    - Busca todos os posts de usuários.
+    - Método: GET
+    - URL: `http://localhost:3000/users/:user_id/posts`
+      
+  - FindOne
+    - Busca um post de um usuário.
+    - Método: GET
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id`
+      
+  - Create
+    - Cria um post.
+    - Método: POST
+    - URL: `http://localhost:3000/users/:user_id/posts`
+    - Body:
+    ```json
+    {
+        "title": "", 
+        "description": ""
+    }
+    ```
+    
+  - Update
+    - Atualiza os dados de um post.
+    - Método: PUT
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id`
+    - Body:
+    ```json
+    {
+        "title": "", 
+        "description": ""
+    }
+    ```
+    
+  - Delete
+    - Remove um post.
+    - Método: DELETE
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id`
+
 ### Comentários
 ### Likes
 ### Seguidores
