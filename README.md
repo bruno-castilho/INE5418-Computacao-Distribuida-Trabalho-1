@@ -153,5 +153,31 @@ Utilize o script shell disponibilizado na pasta raiz do projeto:
 
 
 ### Likes
+  - Like
+    - Curte um post.
+    - Método: POST
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id/likes`
+
+  - Unlike
+    - Remove o curtir de um post.
+    - Método: DELETE
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id/likes`
+
 ### Seguidores
+
+  - Follow
+    - Segue um usuário.
+    - Método: POST
+    - URL: `http://localhost:3000/users/:user_id/follow`
+
+  - Unfollow
+    - Remove o seguir de um usuário.
+    - Método: DELETE
+    - URL: `http://localhost:3000/users/:user_id/follow`
+
 ### Feed
+
+  - Feed
+    - Busca todos os posts que o usuário da sessão segue.
+    - Método: GET
+    - URL: `http://localhost:3000/feed`
