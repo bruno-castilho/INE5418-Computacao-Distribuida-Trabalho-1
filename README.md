@@ -27,6 +27,26 @@ Utilize o script shell disponibilizado na pasta raiz do projeto:
 
 ## Rotas
 
+### Autenticação
+
+  - Login
+    - Cria uma sessão entre o usuário e a aplicação.
+    - Método: POST
+    - URL: `http://localhost:3000/login`
+    - Body:
+    ```json
+    {
+        "email": "", 
+        "password" : ""
+    }
+    ```
+
+  - Logout
+    - Encerra a sessão entre o usuário e a aplicação.
+    - Método: POST
+    - URL: `http://localhost:3000/logout`
+
+
 ### Usuários
   - FindAll
     - Busca todos os usuários.
