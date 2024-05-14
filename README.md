@@ -113,6 +113,45 @@ Utilize o script shell disponibilizado na pasta raiz do projeto:
     - URL: `http://localhost:3000/users/:user_id/posts/:post_id`
 
 ### Comentários
+
+  - FindAll
+    - Busca todos os comentários de um post.
+    - Método: GET
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id/comments`
+      
+  - FindOne
+    - Busca um comentário de um post.
+    - Método: GET
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id/comments/:comment_id`
+      
+  - Create
+    - Cria um comentário em um post.
+    - Método: POST
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id/comments`
+    - Body:
+    ```json
+    {
+        "text": ""
+    }
+    ```
+    
+  - Update
+    - Atualiza os dados de um comentário.
+    - Método: PUT
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id/comments/:comment_id`
+    - Body:
+    ```json
+    {
+        "text": ""
+    }
+    ```
+    
+  - Delete
+    - Remove um comentário de um post.
+    - Método: DELETE
+    - URL: `http://localhost:3000/users/:user_id/posts/:post_id/comments/:comment_id`
+
+
 ### Likes
 ### Seguidores
 ### Feed
