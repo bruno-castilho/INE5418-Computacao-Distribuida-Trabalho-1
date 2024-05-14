@@ -28,6 +28,49 @@ Utilize o script shell disponibilizado na pasta raiz do projeto:
 ## Rotas
 
 ### Usuários
+  - FindAll
+    - Busca todos os usuários.
+    - Método: GET
+    - URL: `http://localhost:3000/users`
+      
+  - FindOne
+    - Busca um usuário.
+    - Método: GET
+    - URL: `http://localhost:3000/users/:user_id`
+      
+  - Create
+    - Cria um usuário.
+    - Método: POST
+    - URL: `http://localhost:3000/users`
+    - Body:
+    ```json
+    {
+        "first_name": "", 
+        "last_name": "", 
+        "email": "", 
+        "password" : ""
+    }
+    ```
+    
+  - Update
+    - Atualiza os dados de um usuário.
+    - Método: PUT
+    - URL: `http://localhost:3000/users/:user_id`
+    - Body:
+    ```json
+    {
+        "first_name": "", 
+        "last_name": "", 
+        "email": "", 
+        "password" : ""
+    }
+    ```
+    
+  - Delete
+    - Remove um usuário.
+    - Método: DELETE
+    - URL: `http://localhost:3000/users/:user_id`
+
 ### Posts
 ### Comentários
 ### Likes
